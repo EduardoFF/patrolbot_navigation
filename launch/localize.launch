@@ -1,0 +1,14 @@
+
+<launch>
+
+  <!-- Run the map server -->
+   <node name="map_server" pkg="map_server" type="map_server" args="$(find patrolbot_navigation)/maps/current_map/map.yaml" output="screen"/>
+
+  <!--- Run AMCL -->
+  <include file="$(find patrolbot_navigation)/launch/amcl.launch">
+   <arg name="scan_topic" value="/RosAria/lms2xx_1_laserscan" />
+  </include>
+
+
+
+</launch>
