@@ -4,6 +4,13 @@
   <!-- Run the map server -->
    <node name="map_server" pkg="map_server" type="map_server" args="$(find patrolbot_navigation)/maps/current_map/map.yaml" output="screen"/>
 
+  <node pkg="patrolbot_navigation" type="lms200fix.py" name="lms200fix" output="screen">
+
+ <remap from="bad_scan"                      to="/RosAria/lms2xx_1_laserscan"/>
+  <remap from="good_scan"                      to="scan"/>
+ </node>
+
+
   <!--- Run AMCL -->
   <include file="$(find patrolbot_navigation)/launch/amcl.launch">
    <arg name="scan_topic" value="/RosAria/lms2xx_1_laserscan" />
