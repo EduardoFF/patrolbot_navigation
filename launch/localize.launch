@@ -13,7 +13,8 @@
 
   <!--- Run AMCL -->
   <include file="$(find patrolbot_navigation)/launch/amcl.launch">
-   <arg name="scan_topic" value="/RosAria/lms2xx_1_laserscan" />
+   <!--<arg name="scan_topic" value="/RosAria/lms2xx_1_laserscan" />-->
+   <arg name="scan_topic" value="/scan" />	
   </include>
 
 
