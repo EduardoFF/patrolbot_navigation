@@ -22,8 +22,8 @@ class LaserFixer(object):
 
 	def _HandleScanMessage(self, msg):
 	
-		msg.angle_min= -1.57079637051
-                msg.angle_max= 1.57079637051
+		#msg.angle_min= -1.57079637051
+                #msg.angle_max= 1.57079637051
                 msg.angle_increment= 0.0174532923847
                 msg.time_increment= 3.70370362361e-05
                 msg.scan_time= 0.0133333336562
